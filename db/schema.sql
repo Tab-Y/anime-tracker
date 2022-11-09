@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS tempname;
+
+CREATE DATABASE tempname;
