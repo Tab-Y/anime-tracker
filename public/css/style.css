@@ -1,0 +1,17 @@
+/* Color and Font Selectors */
+:root {
+--light-bg: #E2D7E4;
+--light-primary: #D7BECB;
+--light-secondary: #DDC8D3;
+--light-highlight: #C8ABBA;
+--dark-bg: #2B282F;
+--dark-primary: #403741;
+--dark-secondary: #503F4C;
+--dark-highlight: #6D4D60;
+--text: #843263;
+--text-hover: #BC4074;
+--accent-base: #712B50;
+--accent-default: #BC4074;
+--accent-highlight: #E05380;
+--comfy: "Comfortaa";
+}
