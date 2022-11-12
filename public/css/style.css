@@ -18,7 +18,7 @@
 --accent-base: #712B50;
 --accent-default: #BC4074;
 --accent-highlight: #E05380;
---comfy: "Comfortaa";
+--comfy: "Comfortaa", cursive;
 }
 
 body {
@@ -67,5 +67,64 @@ li:hover {
     color: var(--light-highlight)
 }
 
+/* Body backgrounnd */
+body {
+    background-color: var(--dark-bg);
+}
 
+/* Card Body */
+.card-body {
+    background-color: var(--dark-secondary);
+    border-bottom-left-radius: 5%;
+     border-bottom-right-radius: 5%;
+ }
+.form-group, p, h5 {
+    color: var(--light-highlight);
+    font-family: var(--comfy);
+}
+.sign-page, .login-page {
+    color: var(--accent-default);
+    font-family: var(--comfy);
+}
+   
+/* Login Card section */
+.login-form {
+    margin-left: 15cm;
+ }
+.login-card {
+    margin-top: 5cm;
+    border-radius: 5%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    background-color: var(--dark-secondary);
+    color: var(--accent-default)
+}
+.login-btn {
+    background-color: var(--light-highlight);
+    border-color: var(--light-highlight);
+}
+.login-btn:hover {
+    background-color: var(--accent-highlight);
+    border-color: var(--accent-highlight);
+}
 
+/* Sign Up Card Section */
+.sign-form {
+    margin-right: 18cm;
+}
+.sign-card {
+    margin-top: 5cm;
+    border-radius: 5%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    background-color: var(--dark-secondary);
+    color: var(--accent-default)
+}
+.sign-btn {
+    background-color: var(--light-highlight);
+    border-color: var(--light-highlight);
+}
+.sign-btn:hover {
+    background-color: var(--accent-highlight);
+    border-color: var(--accent-highlight);
+}
