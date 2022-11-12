@@ -1,3 +1,8 @@
+
+* {
+    font-family: papyrus;
+}
+
 /* Color and Font Selectors */
 :root {
 --light-bg: #E2D7E4;
@@ -15,3 +20,52 @@
 --accent-highlight: #E05380;
 --comfy: "Comfortaa";
 }
+
+body {
+    background-color: var(--dark-bg);
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  
+}
+
+.column {
+    box-sizing: border-box;
+    background-color: var(--dark-primary);
+    position: relative;
+    width: 600px;
+    border-radius: 10px;
+    height: 400px;
+    margin: 50px;
+    color: var(--text);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+ul {
+    margin: 0px;
+    width: 88%;
+    height: 70%;
+    padding: 10px;
+    background-color: var(--dark-secondary);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: scroll;
+    
+}
+li {
+    font-size: 30px;
+    list-style-type: none;
+    color: var(--light-primary)
+}
+li:hover {
+    color: var(--light-highlight)
+}
+
+
+
