@@ -1,6 +1,9 @@
+
 * {
     font-family: papyrus;
 }
+
+/* Color and Font Selectors */
 :root {
 --light-bg: #E2D7E4;
 --light-primary: #D7BECB;
@@ -15,6 +18,7 @@
 --accent-base: #712B50;
 --accent-default: #BC4074;
 --accent-highlight: #E05380;
+--comfy: "Comfortaa";
 }
 
 body {
@@ -62,3 +66,6 @@ li {
 li:hover {
     color: var(--light-highlight)
 }
+
+
+
