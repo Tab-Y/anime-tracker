@@ -76,8 +76,9 @@ body {
 .card-body {
     background-color: var(--dark-secondary);
     border-bottom-left-radius: 5%;
-     border-bottom-right-radius: 5%;
- }
+    border-bottom-right-radius: 5%;
+    box-shadow: 12px 12px 12px 1px #2a063f33;
+}
 .form-group, p, h5 {
     color: var(--light-highlight);
     font-family: var(--comfy);
@@ -85,6 +86,9 @@ body {
 .sign-page, .login-page {
     color: var(--accent-default);
     font-family: var(--comfy);
+}
+input:hover {
+    background-color: var(--light-bg);
 }
    
 /* Login Card section */
