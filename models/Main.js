@@ -1,5 +1,4 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class Main extends Model {};
@@ -14,40 +13,36 @@ Main.init(
         },
         title: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
         },
         type: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
         },
         episodes: { 
             type: DataTypes.INTEGER,
-            allowNull: false
         },
         status: {
             type: DataTypes.STRING,
-            allowNull: false
         },
         season: {
             type: DataTypes.STRING,
-            allowNull: false
         },
         year: {
             type: DataTypes.INTEGER,
-            allowNull: false
         },
         picture: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
         },
         thumbnail: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
         },
-        tags: {
+        tags_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'tags',
-                key: 'id'
-            }
-        }
+                key: 'id',
+            },
+        },
     },
     {
         sequelize,

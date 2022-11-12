@@ -7,8 +7,6 @@ const Users = require('./Users');
 // User.hasMany(CurrentlyWatching {  ...  })
 // User.hasMany(Completed, { ... })
 
-Main.hasMany(Tags, {
-    foreignKey: 'tags'
-});
+
 
 module.exports = { Main, Tags, Users }
