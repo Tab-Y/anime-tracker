@@ -1,3 +1,4 @@
+/* --------------------------------- */
 /* Color and Font Selectors */
 :root {
 --light-bg: #E2D7E4;
@@ -108,10 +109,8 @@ li:hover {
     box-shadow: 0px 4px 8px 0  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
-/* .searchBtn {
-    height: 40px;
-} */
+/* ------------------------------------- */
+/* Login and Sign Up Styling Template */
 
 /* ------------------------------------- */
 /* Login and Sign Up Styling Template */
