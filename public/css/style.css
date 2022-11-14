@@ -89,11 +89,11 @@ input:hover {
     background-color: var(--light-bg);
 }
 
-/* Sign Up Card Section */
-.sign-form {
-    margin-right: 18cm;
+/* Login Card Section */
+.login-form {
+    margin-right: 15cm;
 }
-.sign-card {
+.login-card {
     margin-top: 5cm;
     border-radius: 5%;
     border-bottom-left-radius: 10%;
@@ -101,11 +101,11 @@ input:hover {
     background-color: var(--dark-secondary);
     color: var(--accent-default)
 }
-.sign-btn {
+.login-btn {
     background-color: var(--light-highlight);
     border-color: var(--light-highlight);
 }
-.sign-btn:hover {
+.login-btn:hover {
     background-color: var(--accent-highlight);
     border-color: var(--accent-highlight);
 }
