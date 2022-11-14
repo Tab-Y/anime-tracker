@@ -35,14 +35,7 @@ Main.init(
         },
         thumbnail: {
             type: DataTypes.STRING,
-        },
-        tags_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'tags',
-                key: 'id',
-            },
-        },
+        }
     },
     {
         sequelize,
