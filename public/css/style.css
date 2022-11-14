@@ -73,7 +73,7 @@ li:hover {
     width: 300px;
     border-radius: 10px;
     height: 700px;
-    margin: 50px;
+    margin: 25px;
     color: var(--text);
     text-align: center;
     display: flex;
@@ -83,7 +83,8 @@ li:hover {
 }
 
 .profileHeading {
-    font-size: 29px;
+    margin-top: 20px;
+    font-size: 25px;
 }
 
 .profileRow {
@@ -150,7 +151,6 @@ li:hover {
         flex-wrap: wrap;
     }
 }
-
 /* Small smartphones */
 @media screen and (max-width: 576px) {
     
