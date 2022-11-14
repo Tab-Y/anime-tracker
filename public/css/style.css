@@ -112,6 +112,9 @@ li:hover {
 /* ------------------------------------- */
 /* Login and Sign Up Styling Template */
 
+/* ------------------------------------- */
+/* Login and Sign Up Styling Template */
+
 /* Body backgrounnd */
 body {
     background-color: var(--dark-bg);
@@ -163,3 +166,4 @@ input:hover {
 /* .searchBtn {
     height: 40px;
 } */
+
