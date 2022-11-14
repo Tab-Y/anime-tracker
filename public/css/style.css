@@ -22,7 +22,7 @@
 body {
     background-color: var(--dark-bg);
 }
-
+/* This is the styling for the updates tab */
 .row {
     display: flex;
     justify-content: center;
@@ -42,7 +42,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
 }
 .updatesUl {
     margin: 0px;
@@ -63,7 +62,45 @@ body {
 li:hover {
     color: var(--light-highlight)
 }
-
+/* ---------------------------------------------- */
+/* This is the styling for the profile tab ------------------*/
+.profileColumn {
+    box-sizing: border-box;
+    background-color: var(--dark-primary);
+    position: relative;
+    width: 600px;
+    border-radius: 10px;
+    height: 700px;
+    margin: 50px;
+    color: var(--text);
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+/* This is the styling for the discover tab */
+.discoverColumn {
+    box-sizing: border-box;
+    background-image: linear-gradient( #322b33, #473743, #322b33);
+    box-shadow: 0px 4px 8px 0  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    width: 600px;
+    height: 200px;
+    min-height: 200px;
+    margin: 50px;
+    color: var(--text);
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+.discoverHeading {
+    position: absolute;
+    color: var(--light-secondary);
+    margin-left: 50px;
+    margin-top: 8px;
 /* ---------------------------------------------- */
 /* This is the styling for the discover tab */
 .discoverColumn {
@@ -87,14 +124,12 @@ li:hover {
     color: var(--light-secondary);
     margin-left: 50px;
     margin-top: 8px;
-
 }
 .discoverRow {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-
 .discoverTabs {
     display: flex;
     flex-direction: column;
@@ -108,10 +143,6 @@ li:hover {
     background-image: linear-gradient( #322b33, #473743, #322b33);
     box-shadow: 0px 4px 8px 0  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-/* ------------------------------------- */
-/* Login and Sign Up Styling Template */
-
 /* ------------------------------------- */
 /* Login and Sign Up Styling Template */
 
@@ -166,4 +197,3 @@ input:hover {
 /* .searchBtn {
     height: 40px;
 } */
-
