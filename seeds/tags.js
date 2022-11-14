@@ -1,9 +1,12 @@
 const { Tags } = require('../models');
 
 const tagsData = [
+<<<<<<< HEAD
     {
         "tags": "none"
     },
+=======
+>>>>>>> d3b9f114fe3ce489e6142a37f4ed984771045ac2
     {
         "tags": "band"
     },
@@ -3118,8 +3121,8 @@ const tagsData = [
     {
         "tags": "korean war"
     }
-]
-;        // Tags data
+];
+
 const tagSeed = () => Tags.bulkCreate(tagsData);
 
 module.exports = tagSeed;

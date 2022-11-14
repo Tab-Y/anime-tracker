@@ -6,6 +6,7 @@ const mainSeeds = require('./title');
 const userSeeds = require('./userSeed');
 
 
+
 const seedAll = async () => {
   await sequelize.sync({ force: true });
   
