@@ -18,18 +18,17 @@
 --accent-base: #712B50;
 --accent-default: #BC4074;
 --accent-highlight: #E05380;
---comfy: "Comfortaa", cursive;
+--comfy: "Comfortaa";
 }
 
 body {
     background-color: var(--dark-bg);
 }
-
+/* This is the styling for the updates tab */
 .row {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-  
 }
 
 .column {
@@ -47,7 +46,7 @@ body {
     align-items: center;
    
 }
-ul {
+.updatesUl {
     margin: 0px;
     width: 88%;
     height: 70%;
@@ -58,7 +57,7 @@ ul {
     overflow: scroll;
     
 }
-li {
+.updatesLi {
     font-size: 30px;
     list-style-type: none;
     color: var(--light-primary)
@@ -66,6 +65,55 @@ li {
 li:hover {
     color: var(--light-highlight)
 }
+/* ---------------------------------------------- */
+/* This is the styling for the discover tab */
+.discoverColumn {
+    box-sizing: border-box;
+    background-image: linear-gradient( #322b33, #473743, #322b33);
+    box-shadow: 0px 4px 8px 0  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    width: 600px;
+    height: 200px;
+    min-height: 200px;
+    margin: 50px;
+    color: var(--text);
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+.discoverHeading {
+    position: absolute;
+    color: var(--light-secondary);
+    margin-left: 50px;
+    margin-top: 8px;
+
+
+}
+.discoverRow {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.discoverTabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#query {
+    width: 610px;
+    height: 40px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    background-image: linear-gradient( #322b33, #473743, #322b33);
+    box-shadow: 0px 4px 8px 0  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* .searchBtn {
+    height: 40px;
+} */
 
 /* Body backgrounnd */
 body {
@@ -76,9 +124,11 @@ body {
 .card-body {
     background-color: var(--dark-secondary);
     border-bottom-left-radius: 5%;
+
     border-bottom-right-radius: 5%;
     box-shadow: 12px 12px 12px 1px #2a063f33;
 }
+
 .form-group, p, h5 {
     color: var(--light-highlight);
     font-family: var(--comfy);
@@ -87,30 +137,12 @@ body {
     color: var(--accent-default);
     font-family: var(--comfy);
 }
+
 input:hover {
     background-color: var(--light-bg);
 }
-   
-/* Login Card section */
-.login-form {
-    margin-left: 15cm;
- }
-.login-card {
-    margin-top: 5cm;
-    border-radius: 5%;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
-    background-color: var(--dark-secondary);
-    color: var(--accent-default)
-}
-.login-btn {
-    background-color: var(--light-highlight);
-    border-color: var(--light-highlight);
-}
-.login-btn:hover {
-    background-color: var(--accent-highlight);
-    border-color: var(--accent-highlight);
-}
+
+
 
 /* Sign Up Card Section */
 .sign-form {
