@@ -102,6 +102,7 @@ li:hover {
     color: var(--light-secondary);
     margin-left: 50px;
     margin-top: 8px;
+}
 /* ---------------------------------------------- */
 /* This is the styling for the discover tab */
 .discoverColumn {
@@ -168,6 +169,30 @@ body {
 .sign-page, .login-page {
     color: var(--accent-default);
     font-family: var(--comfy);
+}
+input:hover {
+    background-color: var(--light-bg);
+}
+
+/* Sign Up Card Section */
+.sign-form {
+    margin-right: 18cm;
+}
+.sign-card {
+    margin-top: 5cm;
+    border-radius: 5%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    background-color: var(--dark-secondary);
+    color: var(--accent-default)
+}
+.sign-btn {
+    background-color: var(--light-highlight);
+    border-color: var(--light-highlight);
+}
+.sign-btn:hover {
+    background-color: var(--accent-highlight);
+    border-color: var(--accent-highlight);
 }
 input:hover {
     background-color: var(--light-bg);
