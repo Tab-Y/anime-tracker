@@ -16,6 +16,8 @@
 --comfy: "Comfortaa";
 }
 
+/* ------------------------------------------------- */
+/* Updates Tabs styling Template */
 body {
     background-color: var(--dark-bg);
 }
@@ -98,14 +100,35 @@ li:hover {
     color: var(--light-secondary);
     margin-left: 50px;
     margin-top: 8px;
-
+/* ---------------------------------------------- */
+/* This is the styling for the discover tab */
+.discoverColumn {
+    box-sizing: border-box;
+    background-image: linear-gradient( #322b33, #473743, #322b33);
+    box-shadow: 0px 4px 8px 0  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    width: 600px;
+    height: 200px;
+    min-height: 200px;
+    margin: 50px;
+    color: var(--text);
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+.discoverHeading {
+    position: absolute;
+    color: var(--light-secondary);
+    margin-left: 50px;
+    margin-top: 8px;
 }
 .discoverRow {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-
 .discoverTabs {
     display: flex;
     flex-direction: column;
@@ -118,6 +141,57 @@ li:hover {
     margin-bottom: 50px;
     background-image: linear-gradient( #322b33, #473743, #322b33);
     box-shadow: 0px 4px 8px 0  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* ------------------------------------- */
+/* Login and Sign Up Styling Template */
+
+/* Body backgrounnd */
+body {
+    background-color: var(--dark-bg);
+}
+
+/* Card Body */
+.card-body {
+    background-color: var(--dark-secondary);
+    border-bottom-left-radius: 5%;
+
+    border-bottom-right-radius: 5%;
+    box-shadow: 12px 12px 12px 1px #2a063f33;
+}
+
+.form-group, p, h5 {
+    color: var(--light-highlight);
+    font-family: var(--comfy);
+}
+.sign-page, .login-page {
+    color: var(--accent-default);
+    font-family: var(--comfy);
+}
+
+input:hover {
+    background-color: var(--light-bg);
+}
+
+/* Sign Up Card Section */
+.sign-form {
+    margin-right: 18cm;
+}
+.sign-card {
+    margin-top: 5cm;
+    border-radius: 5%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    background-color: var(--dark-secondary);
+    color: var(--accent-default)
+}
+.sign-btn {
+    background-color: var(--light-highlight);
+    border-color: var(--light-highlight);
+}
+.sign-btn:hover {
+    background-color: var(--accent-highlight);
+    border-color: var(--accent-highlight);
 }
 
 /* .searchBtn {
