@@ -1,41 +1,49 @@
-const loginFormHandler = async (event) => {
+// Login Form
+const loginFormHandlebar = async (event) => {
     event.preventDefault();
 
-    // Collect values from the login form
-    const username = document.querySelector('#email-login').value.trim();
-    const password = document.querySelector('#password-login').value.trim();
+    // Collecting login form values
+    const email = document.querySelector('#email-login').value.trim();
+    const password = document.querySelector('#pass-login').value.trim();
 
-    if (username && password) {
+    // A POST request that sends off to API
+    if (email && password) {
         const response = await fetch('/api/users/login', {
             method: 'POST',
-            body: JSON.stringify({ username, password }),
+            body: JSON.stringify({ email, password}),
             headers: { 'Content-Type': 'application/json' },
         });
 
+        // When login form is correct user is redirected in their profile page
         if (response.ok) {
-            document.location.replace('/dashboard');            // redirects to dashboard if login works
+            document.location.replace('/profile');
         } else {
             alert(response.statusText);
         }
     }
 };
 
+
+// New user Sign-Up form
 const signupFormHandler = async (event) => {
     event.preventDefault();
 
-    const name = document.querySelector('#username-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
+    // Collecting sign-up form values
+    const email = document.querySelector('#email-sign').value.trim();
+    const username = document.querySelector('#user-sign').value.trim();
+    const password = document.querySelector('#pass-sign').value.trim();
 
-    if (name && email && password) {
+    // A POST request that sends off to API
+    if (email && username && password) {
         const response = await fetch('/api/users', {
             method: 'POST',
-            body: JSON.stringify({ name, email, password }),
-            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, username, password}),
+            headers: { 'Content-Type': 'application/json'},
         });
 
+        // When sign-up is sucessful new user is redirected to the profile page
         if (response.ok) {
-            document.location.replace('/dashboard');        // redirects to dashboard if sign in works
+            document.location.replace('/profile');
         } else {
             alert(response.statusText);
         }
@@ -43,11 +51,13 @@ const signupFormHandler = async (event) => {
 };
 
 
-
+// Submission click-on listners
+// Login submit form
 document
     .querySelector('.login-form')
-    .addEventListener('click', loginFormHandler);
+    .addEventListener('submit', loginFormHandlebar);
 
+// Sign-up submit form
 document
     .querySelector('.sign-form')
     .addEventListener('submit', signupFormHandler);
