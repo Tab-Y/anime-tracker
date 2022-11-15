@@ -23,7 +23,8 @@ TagId.init(
             type: DataTypes.INTEGER,
             references: {
                 model: 'main',
-                key: 'id'
+                key: 'id',
+                unique: false
             },
         },
     },

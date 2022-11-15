@@ -2,6 +2,8 @@ const Main = require('./Main');
 const Tags = require('./Tags');
 const Users = require('./Users');
 const TagId = require('./TagId');
+const UserFavorite = require('./UserFavorite');
+const Status = require('./Status');
 
 
 // User.hasMany(Favorites, {  ...   })
@@ -25,4 +27,4 @@ Main.belongsToMany(Tags, {
     foreignkey: 'title_id',
 });
 
-module.exports = { Main, Tags, Users, TagId }
+module.exports = { Main, Tags, Users, TagId, UserFavorite, Status }
