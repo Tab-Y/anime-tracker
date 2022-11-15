@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
     // any type of funcation we need to get to page
 
     res.render('splash', {   // what  handlebar we are rendering
-      // the data we are passing into the handlebar
+    // the data we are passing into the handlebar
     });
   } catch (err) {
     res.status(500).json(err);
