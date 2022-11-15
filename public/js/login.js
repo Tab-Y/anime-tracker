@@ -63,3 +63,8 @@ document
 document
     .querySelector('.sign-form')
     .addEventListener('submit', signupFormHandler);
+
+// Sign-up submit form
+document
+    .querySelector('sign-form')
+    .addEventListener('submit', signupFormHandler);
