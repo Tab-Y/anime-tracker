@@ -2,6 +2,9 @@ const { Tags } = require('../models');
 
 const tagsData = [
     {
+        "tags": "none"
+    },
+    {
         "tags": "band"
     },
     {
