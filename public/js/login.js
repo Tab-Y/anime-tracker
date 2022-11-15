@@ -4,7 +4,7 @@ const loginFormHandlebar = async (event) => {
 
     // Collecting login form values
     const email = document.querySelector('#email-login').value.trim();
-    const password = document.querySelector('pass.login').value.trim();
+    const password = document.querySelector('#pass-login').value.trim();
 
     // A POST request that sends off to API
     if (email && password) {
@@ -22,6 +22,7 @@ const loginFormHandlebar = async (event) => {
         }
     }
 };
+
 
 // New user Sign-Up form
 const signupFormHandler = async (event) => {
@@ -49,6 +50,7 @@ const signupFormHandler = async (event) => {
     }
 };
 
+
 // Submission click-on listners
 // Login submit form
 document
@@ -57,5 +59,5 @@ document
 
 // Sign-up submit form
 document
-    .querySelector('sign-form')
+    .querySelector('.sign-form')
     .addEventListener('submit', signupFormHandler);
