@@ -53,7 +53,6 @@ const signupFormHandler = async (event) => {
 
 
 
-
 // Submission click-on listners
 // Login submit form
 document
