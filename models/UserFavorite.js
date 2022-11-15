@@ -1,7 +1,8 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-
+// planned, watching, completed, dropped
+// make a table for the status
 class UserFavorite extends Model { }
 
 UserFavorite.init(
@@ -27,7 +28,15 @@ UserFavorite.init(
                 model: 'main',
                 key: 'id'
             }
-        }
+        },
+        status: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'status',
+                key: 'id'
+            }
+        },
     },
     {
         sequelize,
