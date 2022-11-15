@@ -1,5 +1,5 @@
 // Login Form
-const loginFormHandlebar = async (event) => {
+const loginFormHandler = async (event) => {
     event.preventDefault();
 
     // Collecting login form values

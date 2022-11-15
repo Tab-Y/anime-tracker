@@ -1,11 +1,19 @@
 const router = require('express').Router();
-const { Main, TagId, Tags, Users } = require('../models');
+const { Main, TagId, Tags, Users, UserFavorite, Status } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-  res.render('login', {
+  try {
+    // const tenTitles = await <the data we search for to render>
 
-  });
+    // any type of funcation we need to get to page
+
+    res.render('login', {   // what  handlebar we are rendering
+      // the data we are passing into the handlebar
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get('/login', (req, res) => {
