@@ -1,3 +1,4 @@
+
 // Login Form
 const loginFormHandlebar = async (event) => {
     event.preventDefault();
@@ -51,11 +52,12 @@ const signupFormHandler = async (event) => {
 };
 
 
+
 // Submission click-on listners
 // Login submit form
 document
     .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandlebar);
+    .addEventListener('submit', loginFormHandler);
 
 // Sign-up submit form
 document
