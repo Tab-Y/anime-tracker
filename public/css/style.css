@@ -23,7 +23,7 @@ body {
     background-color: var(--dark-bg);
 }
 /* This is the styling for the updates tab */
-.row {
+.updatesRow {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -84,6 +84,7 @@ li:hover {
     color: var(--accent-default);
     font-family: var(--comfy);
     text-align: center;
+    text-align: center;
 }
 input:hover {
     background-color: var(--light-bg);
@@ -93,13 +94,22 @@ input:hover {
 /* #log-form {
     margin-left: 5cm;
 } */
+.row {
+    display: flex;
+    justify-content: center;
+}
 .login-card {
-    margin-top: 5cm;
+    margin-top: 30px;
     border-radius: 5%;
     border-bottom-left-radius:10%;
     border-bottom-right-radius: 10%;
     background-color: var(--dark-secondary);
-    color: var(--accent-default)
+    color: var(--accent-default);
+    width: 500px;
+}
+.login-form, .sign-form {
+    padding: 0px;
+    margin-right: 300px;
 }
 #log-btn {
     font-family: var(--comfy);
@@ -112,18 +122,27 @@ input:hover {
     background-color: var(--accent-highlight);
     border-color: var(--accent-highlight);
 }
+.login-instead {
+    margin-left: 37px;
+    text-decoration: none;
+    color: var(--light-primary)
+}
+.login-instead:hover {
+    color: var(--dark-bg);
+}
 
 /* Sign Up Card Section */
 /* .sign-form {
     margin-right: 15cm;
 } */
 .sign-card {
-    margin-top: 5cm;
+    margin-top: 30px;
     border-radius: 5%;
     border-bottom-left-radius: 10%;
     border-bottom-right-radius: 10%;
     background-color: var(--dark-secondary);
-    color: var(--accent-default)
+    color: var(--accent-default);
+    width: 500px;
 }
 #signin-btn {
     font-family: var(--comfy);
@@ -135,6 +154,14 @@ input:hover {
 #signin-btn:hover {
     background-color: var(--accent-highlight);
     border-color: var(--accent-highlight);
+}
+.signup-instead {
+    margin-left: 15px;
+    text-decoration: none;
+    color: var(--light-primary)
+}
+.signup-instead:hover {
+    color: var(--dark-bg);
 }
 
 /* ---------------------------------------------- */
@@ -148,6 +175,7 @@ input:hover {
     height: 700px;
     margin: 30px;
     padding: 0px;
+    font-family: var(--comfy);
     font-family: var(--comfy);
     color: var(--text);
     text-align: center;
@@ -192,6 +220,7 @@ input:hover {
 }
 .profileWelcome {
     font-family: var(--comfy);
+    font-family: var(--comfy);
     color: var(--light-primary);
     margin-left: 20px;
 }
@@ -203,11 +232,12 @@ input:hover {
 }
 .navbar-brand, .navbar-toggler, .nav-link, .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
     font-family: var(--comfy);
+    font-family: var(--comfy);
     color: var(--light-primary);
 }
 
 
-/* ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------ *//* ------------------------------------------------------------------------------ */
 /* splash page css */
 .splash-body {
     background-image: url(../images/rain.gif);
@@ -229,6 +259,7 @@ input:hover {
 }
 
 .welcome {
+    font-family: var(--comfy);
     font-family: var(--comfy);
     color: var(--light-primary);
 }
@@ -253,6 +284,9 @@ input:hover {
 #not-btn:hover, #con-btn:hover {
     background-color: var(--accent-default);
     border-color: var(--accent-highlight);
+}
+#anime-title {
+    font-family: var(--comfy);
 }
 /* This is the styling for the discover tab */
 /* .discoverColumn {
@@ -313,6 +347,10 @@ input:hover {
     }
     .profileHeaders {
         width: 100%;
+    }
+    .login-form, .sign-form {
+        margin-left: 150px;
+        margin-right: 0px;
     }
 }
 /* Small smartphones */
