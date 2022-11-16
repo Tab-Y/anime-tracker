@@ -3,33 +3,37 @@
 
 
 
-
-<div class="container mt-5">
-    <header class="row align-items-center text-center">
-        <div>
-            <h1 class="animate__animated animate__slower animate__heartBeat welcome">Welcome to...</h1>
-        </div>
-    </header>
-    <div class="row text-center p-3">
-
-        <div class="card splashHeader" style="width: 18rem;">
+<body class="splash-body">
+    <div class="container mt-5">
+        <header class="row align-items-center text-center">
             <div>
-                <h3 class="animate__animated animate__delay-1s animate__fadeIn" id="anime-title">Anime Tracker!</h3>
+                <h1 class="animate__animated animate__slower animate__heartBeat welcome">Welcome to...</h1>
             </div>
-            <img src="./images/vecteezy_girl-eyes-in-manga-style_.jpg" class="card-img-top" alt="Image of eyes">
-            <a href="https://www.vecteezy.com/free-vector/eyes">Eyes Vectors by Vecteezy</a> {{!-- credit for vectored
-            img --}}
-            <div class="card-body">
-                <p class="card-text">A place where you can track the anime you're watching!</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-center m-5">
-                    <button class="btn btn-primary me-md-2" type="button"><a id="log-in" href="/login">Continue to Log
-                            in</a></button>
-                    <button class="btn btn-primary" type="button"><a id="do-not" href="/api/discover/">Don't log in and
-                            continue</a></button>
+        </header>
+        <div class="row text-center p-3">
+
+            <div class="card splashHeader" style="width: 18rem;">
+                <div>
+                    <h3 class="animate__animated animate__delay-1s animate__fadeIn" id="anime-title">Anime Tracker!</h3>
+                </div>
+                <img src="./images/vecteezy_girl-eyes-in-manga-style_.jpg" class="card-img-top" alt="Image of eyes">
+                <a href="https://www.vecteezy.com/free-vector/eyes" class="eyes-vec">Eyes Vectors by Vecteezy</a> {{!--
+                credit for vectored
+                img --}}
+                <div class="card-body intro-card">
+                    <p class="card-text">A place where you can track the anime you're watching!</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center m-5">
+                        <button class="btn btn-primary me-md-2" type="button" id="con-btn"><a id="log-in"
+                                href="/login">Continue to Log
+                                in</a></button>
+                        <button class="btn btn-primary" type="button" id="not-btn"><a id="do-not"
+                                href="/api/discover/">Don't log in and
+                                continue</a></button>
+                    </div>
                 </div>
             </div>
+
         </div>
 
     </div>
-
-</div>
+</body>

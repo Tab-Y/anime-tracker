@@ -209,10 +209,23 @@ input:hover {
 
 /* ------------------------------------------------------------------------------ */
 /* splash page css */
+.splash-body {
+    background-image: url(../images/rain.gif);
+    background-size: cover;
+    height: 100vh;
+    padding:0;
+    margin:0;
+
+}
 .splashHeader {
     color: var(--light-primary);
     background-image: linear-gradient( #322b33, #473743, #322b33);
+    border-radius: 5%;
     box-shadow: 0px 4px 8px 0  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.intro-card {
+    border-radius: 5%;
+    margin-bottom: 5px;
 }
 
 .welcome {
@@ -221,6 +234,25 @@ input:hover {
 }
 #anime-title {
     font-family: var(--comfy);
+    font-size: 35px;
+}
+.eyes-vec {
+    font-family: var(--comfy);
+    color: var(--accent-default);
+}
+.eyes-vec:hover {
+    color: var(--accent-highlight);
+}
+#log-in, #do-not {
+    font-family: var(--comfy);
+    color: var(--accent-highlight);
+}
+#not-btn, #con-btn {
+    background-color: var(--accent-base);
+}
+#not-btn:hover, #con-btn:hover {
+    background-color: var(--accent-default);
+    border-color: var(--accent-highlight);
 }
 /* This is the styling for the discover tab */
 /* .discoverColumn {
