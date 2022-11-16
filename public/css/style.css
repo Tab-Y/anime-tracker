@@ -186,6 +186,10 @@ input:hover {
     justify-content: center;
     align-items: center;
 }
+.profileWelcome {
+    color: var(--light-primary);
+    margin-left: 20px;
+}
 /* Navbar Styling ---------------------------------------------------------------------------------------*/
 
 .navbar {
@@ -250,6 +254,12 @@ input:hover {
 @media screen and (max-width: 768px) {
     .profileRow {
         flex-wrap: wrap;
+    }
+    .profileColumn {
+        width: 100%;
+    }
+    .profileHeaders {
+        width: 100%;
     }
 }
 /* Small smartphones */
