@@ -191,6 +191,7 @@ input:hover {
     align-items: center;
 }
 .profileWelcome {
+    font-family: var(--comfy);
     color: var(--light-primary);
     margin-left: 20px;
 }
@@ -206,7 +207,7 @@ input:hover {
 }
 
 
-
+/* ------------------------------------------------------------------------------ */
 /* splash page css */
 .splashHeader {
     color: var(--light-primary);
@@ -217,6 +218,9 @@ input:hover {
 .welcome {
     font-family: var(--comfy);
     color: var(--light-primary);
+}
+#anime-title {
+    font-family: var(--comfy);
 }
 /* This is the styling for the discover tab */
 /* .discoverColumn {
