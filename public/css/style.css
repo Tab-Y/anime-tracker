@@ -148,6 +148,7 @@ input:hover {
     height: 700px;
     margin: 30px;
     padding: 0px;
+    font-family: var(--comfy);
     color: var(--text);
     text-align: center;
     display: flex;
@@ -200,6 +201,7 @@ input:hover {
     box-shadow: 0px 4px 8px 0  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .navbar-brand, .navbar-toggler, .nav-link, .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    font-family: var(--comfy);
     color: var(--light-primary);
 }
 
@@ -213,6 +215,7 @@ input:hover {
 }
 
 .welcome {
+    font-family: var(--comfy);
     color: var(--light-primary);
 }
 /* This is the styling for the discover tab */
