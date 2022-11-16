@@ -1,4 +1,11 @@
-const { Users } = require('../models')
+// this is the seeds for the table users in the anime_db
+const { Users } = require('../models'); 
+
+
+// data should be in the format of 
+// {"username": "<--input-->",          -- this input should come from the front end fetch to sign up, and identify users on the dashboard
+// "password": "<--input-->",           -- this input should come from the front end fetch to either sign up or to log in
+// "email": "<--input-->"}              -- this input should come from the front end fetch to either sign up or to log in
 
 const userData = [
     {

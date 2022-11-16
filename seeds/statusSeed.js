@@ -1,5 +1,7 @@
-// planned, watching, completed, dropped
+// this is the status of users interation with the anime
 const { Status } = require('../models');
+
+// this data should remain static
 
 const status = [
     {
