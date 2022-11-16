@@ -1,4 +1,7 @@
+// this is the tags table, used for genre or keyword lookup
 const { Tags } = require('../models');
+
+// data added should be in the {"tags": "<--- value --->"} format
 
 const tagsData = [
     {
