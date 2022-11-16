@@ -9,6 +9,11 @@ router.get('/', async (req, res) => {
       "shape",
       "discover",
       "colCarousel"
+    ],
+    group: [
+      "Seasonal",
+      "Popular",
+      "Recommended"
     ]
   });
 });
