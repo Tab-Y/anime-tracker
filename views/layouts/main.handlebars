@@ -43,7 +43,8 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="/api/profile">View My Profile</a></li>
                             <li><a class="dropdown-item" href="/login">Login</a></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                            <li><button class="no-button" id="logout">Logout</button></li>
+                            
                         </ul>
                     </li>
                 </ul>
@@ -52,6 +53,8 @@
     </nav>
     {{{ body }}}
     {{!-- Html insert --}}
-
+{{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 </html>
