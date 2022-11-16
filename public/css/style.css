@@ -63,7 +63,6 @@ body {
 li:hover {
     color: var(--light-highlight)
 }
-/* ---------------------------------------------- */
 
 /* ---------------------------------------------- */
 /* Login and Sign Up Styling Template */
@@ -72,7 +71,6 @@ li:hover {
 .card-body {
     background-color: var(--dark-secondary);
     border-bottom-left-radius: 5%;
-
     border-bottom-right-radius: 5%;
     box-shadow: 12px 12px 12px 1px #2a063f33;
 }
@@ -81,42 +79,44 @@ li:hover {
     color: var(--light-highlight);
     font-family: var(--comfy);
 }
-.sign-page, .login-page {
+#title {
+    background-color: var(--dark-secondary);
     color: var(--accent-default);
     font-family: var(--comfy);
+    text-align: center;
 }
 input:hover {
     background-color: var(--light-bg);
 }
 
 /* Login Card Section */
-.login-form {
-    margin-right: 15cm;
-}
+/* #log-form {
+    margin-left: 5cm;
+} */
 .login-card {
     margin-top: 5cm;
     border-radius: 5%;
-    border-bottom-left-radius: 10%;
+    border-bottom-left-radius:10%;
     border-bottom-right-radius: 10%;
     background-color: var(--dark-secondary);
     color: var(--accent-default)
 }
-.login-btn {
+#log-btn {
+    font-family: var(--comfy);
+    margin-left: 0.25cm;
+    margin-bottom: 0.15cm;
     background-color: var(--light-highlight);
     border-color: var(--light-highlight);
 }
-.login-btn:hover {
+#log-btn:hover {
     background-color: var(--accent-highlight);
     border-color: var(--accent-highlight);
 }
-input:hover {
-    background-color: var(--light-bg);
-}
 
 /* Sign Up Card Section */
-.sign-form {
-    margin-right: 18cm;
-}
+/* .sign-form {
+    margin-right: 15cm;
+} */
 .sign-card {
     margin-top: 5cm;
     border-radius: 5%;
@@ -125,11 +125,14 @@ input:hover {
     background-color: var(--dark-secondary);
     color: var(--accent-default)
 }
-.sign-btn {
+#signin-btn {
+    font-family: var(--comfy);
+    margin-left: 0.25cm;
+    margin-bottom: 0.15cm;
     background-color: var(--light-highlight);
     border-color: var(--light-highlight);
 }
-.sign-btn:hover {
+#signin-btn:hover {
     background-color: var(--accent-highlight);
     border-color: var(--accent-highlight);
 }
@@ -145,6 +148,7 @@ input:hover {
     height: 700px;
     margin: 30px;
     padding: 0px;
+    font-family: var(--comfy);
     color: var(--text);
     text-align: center;
     display: flex;
@@ -187,6 +191,7 @@ input:hover {
     align-items: center;
 }
 .profileWelcome {
+    font-family: var(--comfy);
     color: var(--light-primary);
     margin-left: 20px;
 }
@@ -197,10 +202,26 @@ input:hover {
     box-shadow: 0px 4px 8px 0  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .navbar-brand, .navbar-toggler, .nav-link, .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    font-family: var(--comfy);
     color: var(--light-primary);
 }
 
 
+/* ------------------------------------------------------------------------------ */
+/* splash page css */
+.splashHeader {
+    color: var(--light-primary);
+    background-image: linear-gradient( #322b33, #473743, #322b33);
+    box-shadow: 0px 4px 8px 0  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.welcome {
+    font-family: var(--comfy);
+    color: var(--light-primary);
+}
+#anime-title {
+    font-family: var(--comfy);
+}
 /* This is the styling for the discover tab */
 /* .discoverColumn {
     box-sizing: border-box;
