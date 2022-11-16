@@ -14,23 +14,22 @@
     <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            {{#each anime}}
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="{{@index}}" aria-label="Slide {{@index}}"></button>
+            {{/each}}
         </div>
     
         <div class="carousel-inner">
             <div class="carousel-item active c-item">
-                <img src="https://via.placeholder.com/1920x1080" class="d-block w-100 c-img" alt="Slide 1">
-                <div class="banner">SPY×FAMILY Part 2</div>
-            </div>
-            <div class="carousel-item c-item">
                 <img src="https://via.placeholder.com/1920x1080" class="d-block w-100 c-img" alt="Slide 2">
                 <div class="banner"></div>
             </div>
+            {{#each anime}}
             <div class="carousel-item c-item">
-                <img src="https://via.placeholder.com/1920x1080" class="d-block w-100 c-img" alt="Slide 3">
-                <div class="banner"></div>
+                <img src="{{picture}}" class="d-block w-100 c-img" alt="Slide {{@index}}">
+                <div class="banner">{{title}}</div>
             </div>
+            {{/each}}
         </div>
     </div>
 </section>
