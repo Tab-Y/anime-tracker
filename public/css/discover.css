@@ -1,0 +1,266 @@
+/* 
+Global attributes begin here 
+*/
+:root {
+    --bg2: #d9d9d9;
+    --font-color: rgba(120, 118, 140, 0.4);
+    --font-highlight: #78768c;
+    --dark-bg-67: rgba(43, 40, 47, 0.667);
+    --gold-1: #edc791;
+    --dark-bg-highlight: #503f4c;
+
+    --light-bg: #E2D7E4;
+    --light-primary: #D7BECB;
+    --light-secondary: #DDC8D3;
+    --light-highlight: #C8ABBA;
+    --dark-bg: #2B282F;
+    --dark-primary: #403741;
+    --dark-secondary: #503F4C;
+    --dark-highlight: #6D4D60;
+    --text: #843263;
+    --text-hover: #BC4074;
+    --accent-base: #712B50;
+    --accent-default: #BC4074;
+    --accent-highlight: #E05380;
+    --invis: #ffffff00;
+}
+
+* {
+    color: var(--font-color);
+    font-family: "Nexa";
+}
+
+body {
+    background-color: var(--dark-bg);
+    overflow: visible;
+}
+
+.down-shift {
+    margin-bottom: -0.75rem;
+}
+
+h1 {
+    color: var(--font-highlight);
+    padding-bottom: 1rem;
+}
+
+[class*="shape"] {
+    padding: .25rem;
+    border-radius: 10px;
+    height: auto;
+    width: auto;
+}
+
+.search-bar {
+    padding: 1.5rem 25%;
+}
+
+.trending-zone {
+    /* background-color: #6D4D6022; */
+    width: auto;
+    height: auto;
+    padding: 0 25%;
+    padding-bottom: 45px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-jumbo {
+    background-color: var(--dark-bg);
+    width: 100%;
+
+    background-image: url("../images/spy\ x\ family\ season\ 2\ visual.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    overflow: hidden;
+    position: relative;
+}
+
+.banner {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    background-color: var(--dark-bg-67);
+    width: inherit;
+    height: 9vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-1);
+    font-size: 3vw;
+}
+
+.carousel-zone-1 {
+    padding: 1.5rem 25%;
+}
+
+/*
+BOOTSTRAP MODIFICATIONS
+*/
+
+/* Bootstrap form-border override */
+.form-control, .input-group-text {
+    border: none;
+    color: var(--font-color);
+}
+
+/* Input form specifically */
+.form-control {
+    padding-left: 0;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+/* Search icon specifically */
+.input-group-text {
+    margin: 0 0.375rem;
+}
+
+/* Adjusting placeholder text color */
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--font-color);
+    opacity: 1; /* Firefox */
+}
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--font-color);
+}
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--font-color);
+}
+
+/* Get's rid of blue border from search bar */
+input:focus, input.form-control:focus {
+    outline: none;
+    outline-width: 0;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+
+    color: var(--font-highlight);
+}
+/* Learned from https://stackoverflow.com/questions/1457849/how-to-remove-the-border-highlight-on-an-input-text-element */
+
+input, input.form-control {
+    color: var(--font-highlight);
+    font-family: "Nexa Light";
+}
+
+@font-face {
+    font-family: "Nexa Bold";
+    src: url("//db.onlinewebfonts.com/t/c9f309b3d47969ecac64a77a6c672594.eot");
+    src: url("//db.onlinewebfonts.com/t/c9f309b3d47969ecac64a77a6c672594.eot?#iefix") format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/c9f309b3d47969ecac64a77a6c672594.woff2") format("woff2"),
+        url("//db.onlinewebfonts.com/t/c9f309b3d47969ecac64a77a6c672594.woff") format("woff"),
+        url("//db.onlinewebfonts.com/t/c9f309b3d47969ecac64a77a6c672594.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/c9f309b3d47969ecac64a77a6c672594.svg#Nexa Bold") format("svg");
+}
+/* Pulled from https://www.onlinewebfonts.com/download/c9f309b3d47969ecac64a77a6c672594 */
+
+@font-face {
+    font-family: "Nexa Light";
+    src: url("//db.onlinewebfonts.com/t/086d543873365bb6afb5c90eabb7c3e8.eot");
+    src: url("//db.onlinewebfonts.com/t/086d543873365bb6afb5c90eabb7c3e8.eot?#iefix") format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/086d543873365bb6afb5c90eabb7c3e8.woff2") format("woff2"),
+        url("//db.onlinewebfonts.com/t/086d543873365bb6afb5c90eabb7c3e8.woff") format("woff"),
+        url("//db.onlinewebfonts.com/t/086d543873365bb6afb5c90eabb7c3e8.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/086d543873365bb6afb5c90eabb7c3e8.svg#Nexa Light") format("svg");
+}
+/* Pulled from https://www.onlinewebfonts.com/download/086d543873365bb6afb5c90eabb7c3e8 */
+
+@font-face {
+    font-family: "Nexa"; 
+    src: url("//db.onlinewebfonts.com/t/69712626791f7ffb53fcc0b9a3bf2b42.eot"); 
+    src: url("//db.onlinewebfonts.com/t/69712626791f7ffb53fcc0b9a3bf2b42.eot?#iefix") format("embedded-opentype"), 
+        url("//db.onlinewebfonts.com/t/69712626791f7ffb53fcc0b9a3bf2b42.woff2") format("woff2"), 
+        url("//db.onlinewebfonts.com/t/69712626791f7ffb53fcc0b9a3bf2b42.woff") format("woff"), 
+        url("//db.onlinewebfonts.com/t/69712626791f7ffb53fcc0b9a3bf2b42.ttf") format("truetype"), 
+        url("//db.onlinewebfonts.com/t/69712626791f7ffb53fcc0b9a3bf2b42.svg#Nexa") format("svg");
+}
+/* Pulled from https://www.onlinewebfonts.com/download/69712626791f7ffb53fcc0b9a3bf2b42 */
+
+.c-item {
+    height: 480px;
+}
+  
+.c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 0;
+    background-color: var(--dark-bg-highlight);
+}
+
+.carousel-indicators .active {
+    background-color: var(--gold-1);
+    width: 25px;
+    height: 25px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    margin: 0;
+    bottom: calc(-25px - 10px);
+    
+    display: flex;
+    align-items: center;
+}
+
+.carousel-item {
+    height: 20%;
+    overflow: hidden;
+    position: relative;
+}
+
+.column-carousels {
+    width: 50%;
+    margin: auto;
+    padding: 1rem;
+}
+
+.column-carousels * {
+    padding: 0;
+}
+
+.column-carousels .shape1 {
+    padding: 0.5rem 1rem;
+}
+
+.column-carousels .down-shift {
+    margin-bottom: -0.25rem;
+    margin-left: 0.5rem;
+}
+
+.custom2 .col-md-3 {
+    transform: scale(0.9);
+}
+
+.custom1 {
+    transform: scale(0.9);
+}
+
+[class*="fa-angle-"] {
+    transform: scale(3.5);
+    color: var(--dark-bg-highlight);
+}
+
+[class*="fa-angle-"]:hover {
+    color: var(--gold-1);
+}
+
+[class*="carousel-control-"] {
+    text-decoration: none;
+    margin: -5%;
+}

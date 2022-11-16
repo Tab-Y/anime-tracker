@@ -5,8 +5,12 @@ const withAuth = require('../../utils/auth');
 
 router.get('/', async (req, res) => {
   res.render('discover', { 
-
+    css: [
+      "shape",
+      "discover",
+      "colCarousel"
+    ]
   });
-  });
+});
 
-  module.exports = router;
+module.exports = router;
