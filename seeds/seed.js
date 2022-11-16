@@ -7,7 +7,7 @@ const userSeeds = require('./userSeed');
 const favSeeds = require('./userFavoriteSeed');
 const statusSeeds = require('./statusSeed');
 
-
+// seeds the database with seed data
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
