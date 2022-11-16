@@ -8,6 +8,10 @@
         </div>
     </div>
 </section>
+
+{{#if group}}
+{{> discovergroups}}
+{{else}}
 <section class="trending-zone">
     <h1 class="header-font down-shift">Trending</h1>
     <!-- spy x family season 2 visual imagesize:1920x1080 -->
@@ -33,9 +37,12 @@
         </div>
     </div>
 </section>
-{{#each group}}
+{{!-- tabs to each discovery --}}
+
+{{/if}}
+{{!-- {{#each group}}
 <section class="column-carousels">
-    <h1 class="header-font down-shift">{{this}}</h1>
+    <h1 class="header-font down-shift">{{group.group}}</h1>
     <div class="shape1">
         <div class="container text-center my-3"> 
             <div class="row mx-auto my-auto justify-content-center">
@@ -70,7 +77,7 @@
         </div>
     </div>
 </section>
-{{/each}}
+{{/each}} --}}
 <!-- spy x family season 2 visual imagesize:1920x1080 -->
 <!-- JS Scripts -->
 <script src="/js/createHTML.js"></script>
