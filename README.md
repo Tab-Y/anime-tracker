@@ -1,9 +1,10 @@
-# Not known 
+# Anime Tracker
 ![License](https://img.shields.io/badge/License-mit-blue)
 
 ## Description 
 
-TBD
+This project is one of passion! The fire of youth! It allows you to keep track of the anime you are watching!!! Along with helping you keep track of the anime you have watched in the past!
+There is also a way to plan out the anime you want to watch as well!
  
 ## Table of Contents
  
@@ -28,7 +29,7 @@ TBD
 
 ## Credits 
 
-TBD 
+Credits go out to manami-project for their impressive anime database collation.
 
 ## License 
 
