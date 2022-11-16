@@ -4,11 +4,11 @@ const loginFormHandler = async (event) => {
 
     // Collecting login form values
     const email = document.querySelector('#email-login').value.trim();
-    const password = document.querySelector('#pass-login').value.trim();
+    const password = document.querySelector('#password-login').value.trim();
 
     // A POST request that sends off to API
     if (email && password) {
-        const response = await fetch('/api/users/login', {
+        const response = await fetch('/api/user/login', {
             method: 'POST',
             body: JSON.stringify({ email, password}),
             headers: { 'Content-Type': 'application/json' },
@@ -29,13 +29,14 @@ const signupFormHandler = async (event) => {
     event.preventDefault();
 
     // Collecting sign-up form values
-    const email = document.querySelector('#email-sign').value.trim();
-    const username = document.querySelector('#user-sign').value.trim();
-    const password = document.querySelector('#pass-sign').value.trim();
+    const email = document.querySelector('#email-signup').value.trim();
+    const username = document.querySelector('#username-signup').value.trim();
+    const password = document.querySelector('#password-signup').value.trim();
+    // const password = document.querySelector('#pass-sign').value.trim();
 
     // A POST request that sends off to API
     if (email && username && password) {
-        const response = await fetch('/api/users', {
+        const response = await fetch('/api/user', {
             method: 'POST',
             body: JSON.stringify({ email, username, password}),
             headers: { 'Content-Type': 'application/json'},
@@ -55,10 +56,8 @@ const signupFormHandler = async (event) => {
 // Submission click-on listners
 // Login submit form
 document
-    .querySelector('.login-form')
+    .querySelector('.logged-form')
     .addEventListener('submit', loginFormHandler);
-
-// Sign-up submit form
 document
-    .querySelector('.sign-form')
+    .querySelector('.signup-form')
     .addEventListener('submit', signupFormHandler);

@@ -19,11 +19,34 @@ There is also a way to plan out the anime you want to watch as well!
 
 ##  Installation 
 
-TBD 
+Setup .env variables
+    - database name anime_db
+    - your database user name
+    - your database password
+
+Create your database
+
+seed your database
+    ```
+    npm run seed
+    ```
+
+Start server
+    ```
+    npm start
+    ```
+
+View locally
+    ```
+    localhost:3001
+    ```
+
+Or visit the deployed application 
 
 ## Usage 
 
-TBD 
+Vist the deployed application at this link!
+<!-- link goes here -->
 
 ![Descriptive text](assets/images/screenshot.png) 
 
@@ -48,8 +71,3 @@ Add features to this space
 ## Questions 
 
 If you have any questions or concerns, please reach out to tbd at tbd. 
-
-## Tests 
-
-TBD 
-

@@ -8,35 +8,41 @@
         </div>
     </div>
 </section>
+
+{{#if group}}
+{{> discovergroups}}
+{{else}}
 <section class="trending-zone">
     <h1 class="header-font down-shift">Trending</h1>
     <!-- spy x family season 2 visual imagesize:1920x1080 -->
     <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            {{#each anime}}
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="{{@index}}" aria-label="Slide {{@index}}"></button>
+            {{/each}}
         </div>
     
         <div class="carousel-inner">
             <div class="carousel-item active c-item">
-                <img src="https://via.placeholder.com/1920x1080" class="d-block w-100 c-img" alt="Slide 1">
-                <div class="banner">SPY×FAMILY Part 2</div>
-            </div>
-            <div class="carousel-item c-item">
                 <img src="https://via.placeholder.com/1920x1080" class="d-block w-100 c-img" alt="Slide 2">
                 <div class="banner"></div>
             </div>
+            {{#each anime}}
             <div class="carousel-item c-item">
-                <img src="https://via.placeholder.com/1920x1080" class="d-block w-100 c-img" alt="Slide 3">
-                <div class="banner"></div>
+                <img src="{{picture}}" class="d-block w-100 c-img" alt="Slide {{@index}}">
+                <div class="banner">{{title}}</div>
             </div>
+            {{/each}}
         </div>
     </div>
 </section>
-{{#each group}}
+{{!-- tabs to each discovery --}}
+
+{{/if}}
+{{!-- {{#each group}}
 <section class="column-carousels">
-    <h1 class="header-font down-shift">{{this}}</h1>
+    <h1 class="header-font down-shift">{{group.group}}</h1>
     <div class="shape1">
         <div class="container text-center my-3"> 
             <div class="row mx-auto my-auto justify-content-center">
@@ -71,7 +77,7 @@
         </div>
     </div>
 </section>
-{{/each}}
+{{/each}} --}}
 <!-- spy x family season 2 visual imagesize:1920x1080 -->
 <!-- JS Scripts -->
 <script src="/js/createHTML.js"></script>
