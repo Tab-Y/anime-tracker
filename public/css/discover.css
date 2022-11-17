@@ -288,3 +288,11 @@ input, input.form-control {
     justify-content: center;
     align-items: flex-end;
 }
+
+.carousel-inner {
+    height: 65vh;
+}
+
+.carousel-inner .carousel-item {
+    height: 100%;
+}
