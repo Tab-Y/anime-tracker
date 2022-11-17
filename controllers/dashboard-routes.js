@@ -9,18 +9,19 @@ const { Main, TagId, Tags, Users, UserFavorite, Status } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
+    console.log("req.session")
   try {
-      const postData = await Post.findAll({
+      const userData = await Users.findAll({
           where: {
               user_id: req.session.user_id        // renders posts by this user
           },
-          include: [ { model: User } ]
+
       });
 
-      const posts = postData.map((post) => post.get({ plain: true }));
+      const pulledUser = userData.map((data) => data.get({ plain: true }));
 
       res.render('profile', {                   // renders user profile handlebar
-          posts,
+          pulledUser,
           loggedIn: req.session.loggedIn
       });
   } catch (err) {
