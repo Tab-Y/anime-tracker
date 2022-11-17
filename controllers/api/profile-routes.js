@@ -55,11 +55,13 @@ router.get('/favorites/:id', withAuth, async (req, res) => {
   }
 });
 
-router.post('/favorites', withAuth, async (req, res) => {
+router.post('/favorites',  async (req, res) => {
+  console.log(req.body)
   try {
     const createNewFav = await UserFavorite.create(req.body, {
-      userId: req.session.user_id,
-      ...req.body,
+      userId: 8,
+      favoriteTitleId: req.body.favoriteTitleId,
+      status: req.body.status
     });
     res.status(200).json(createNewFav)
   } catch (err) {
@@ -67,12 +69,12 @@ router.post('/favorites', withAuth, async (req, res) => {
   }
 })
 
-router.delete('/favorites/:id', withAuth, async (req, res) => {      // deletes favs by id (and userId)
+router.delete('/favorites/:id',  async (req, res) => {      // deletes favs by id (and userId)
   try {
     const favDelete = await UserFavorite.destroy({
       where: {
         id: req.params.id,              // form select UUID (for the db) linked to that favorite
-        userId: req.session.user_id,
+        userId: 8,
       },
     });
     if (!favDelete) {
