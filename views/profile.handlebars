@@ -1,3 +1,4 @@
+{{> nav}}
 {{!-- Profile Username welcome page --}}
 <div>
     <h2 class="profileWelcome">Welcome, {{username}}!</h2>
@@ -7,51 +8,39 @@
 <div class="profileRow">
     <div class="col-lg profileColumn">
         <h3 class="profileHeaders">Watchlist</h3>
-        <!-- <ul class="profileUl">
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-            </ul> -->
+        <ul class="profileUl">
+            {{#each status}}
+            {{#if planned}}
+            <li class="updatesLi">Test</li>
+            {{/if}}
+            {{/each}}
     </div>
     <div class="col-lg profileColumn">
         <h3 class="profileHeading profileHeaders">Currently Watching</h3>
-        <!-- <ul class="profileUl">
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-            </ul> -->
+        <ul class="profileUl">
+            {{#each status}}
+            {{#if watching}}
+            <li class="updatesLi">Test</li>
+            {{/if}}
+            {{/each}}
     </div>
     <div class="col-lg profileColumn">
         <h3 class="profileHeaders">Completed</h3>
-        <!-- <ul class="profileUl">
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-            </ul> -->
+        <ul class="profileUl">
+            {{#each status}}
+            {{#if completed}}
+            <li class="updatesLi">Test</li>
+            {{/if}}
+            {{/each}}
     </div>
     <div class="col-lg profileColumn">
         <h3 class="profileHeaders">Dropped</h3>
-        <!-- <ul class="profileUl">
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-                <li class="updatesLi">Test</li>
-            </ul> -->
+        <ul class="profileUl">
+            {{#each status}}
+            {{#if dropped}}
+            <li class="updatesLi">Test</li>
+            {{/if}}
+            {{/each}}
     </div>
 </div>
 

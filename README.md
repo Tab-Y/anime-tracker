@@ -1,5 +1,5 @@
 # Anime Tracker
-![License](https://img.shields.io/badge/License-mit-blue)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description 
 
@@ -12,7 +12,6 @@ There is also a way to plan out the anime you want to watch as well!
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
-- [Badges](#badges)
 - [Features](#features)
 - [Questions](#questions)
 - [Tests](#tests) 
@@ -56,13 +55,7 @@ Credits go out to manami-project for their impressive anime database collation.
 
 ## License 
 
-MIT License 
-Please refer to License in repository.  
- 
-
-## Badges 
-
-Add badges to this section 
+Distributed under the MIT License. See [LICENSE](./LICENSE) for more information. 
 
 ## Features 
 
@@ -70,4 +63,9 @@ Add features to this space
 
 ## Questions 
 
-If you have any questions or concerns, please reach out to tbd at tbd. 
+If you have any questions or concerns, please reach out to one of our collaborators: 
+
+* Taber Youmans: tlyoumans@gmail.com
+* Ian Binstock: ibinstock@outlook.com
+* Maria Constanza: mariaysabelconstanza@gmail.com
+* Jessica Almand: jlalmand27@gmail.com
