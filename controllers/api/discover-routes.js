@@ -87,8 +87,6 @@ try {
 
 router.get('/popular', async (req, res) => {
   try {
-  
-    
     const userFav = await UserFavorite.findAll({})
     const popularCarousel = [];                       // array for where most favorited titles are
     for (i=0;i<8;i++) {
@@ -96,12 +94,25 @@ router.get('/popular', async (req, res) => {
       for(x=0;x<userFav.length;x++){
           popArr.push(userFav[x].favoriteTitleId)    // pulls id number from favs list
       }
-      popularCarousel.push(Math.floor(Math.random() * popArr.length))
+      popularCarousel.push(popArr[Math.floor(Math.random()*popArr.length)])
     };
 
-    const special = popularCarousel.map((data) => data.get({ plain: true }));
+    const formattedData = [];
+    
+    for (let i = 0; i < popularCarousel.length; i++) {
+      const obj = popularCarousel[i]
+      // string formatting to make it work properly w/o bugs
+      const newData = await Main.findOne({
+        where: {
+          id: obj
+        }
+      });
+      console.log(newData)
+        formattedData.push(newData);
+      
+    }
+    const special = formattedData.map((data) => data.get({ plain: true }));
 
-    console.log(special)
 
 
     res.render('discover', {
@@ -118,19 +129,38 @@ router.get('/popular', async (req, res) => {
   }
   });
 
-  router.get('/recommended', async (req, res) => {
+  router.get('/recommended', withAuth, async (req, res) => {
     try {
-
+      
       const genreId = 81;                               // future update to user input for their favorite genre/ keywords
-      const recData = await Tags.findByPk(genreId, {});
+      const recData = await TagId.findAll({
+        where: {
+          tag_id: genreId
+        },
+
+      });
       const recomendedCarousel = [];                   // array to match genre / keyword / tag
       for(j=0;j<8;j++){
         recomendedCarousel.push(recData[Math.floor(Math.random()*recData.length)])
       };
-  
-      const special = recomendedCarousel.map((data) => data.get({ plain: true }));
+      
+      const formattedData = [];
 
-        console.log(special)
+      for (let i = 0; i < recomendedCarousel.length; i++) {
+        const obj = recomendedCarousel[i].title_id
+        // string formatting to make it work properly w/o bugs
+          console.log(obj)
+        const newData = await Main.findOne({
+          where: {
+            id: obj
+          }
+        });
+  
+        formattedData.push(newData);
+      }
+
+      const special = formattedData.map((data) => data.get({ plain: true }));
+
 
       res.render('discover', {
         special,
