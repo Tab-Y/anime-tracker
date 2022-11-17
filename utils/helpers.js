@@ -51,5 +51,23 @@ module.exports = {
         }
 
         return ret;
+    },
+    jumboImages: (context, options) => {
+        var ret = `
+            <div class="carousel-item active c-item">
+                <img src="${context[0].picture}" class="d-block w-100 c-img" alt="Slide 1">
+                <div class="banner">${context[0].title}</div>
+            </div>`;
+
+        var viewLen = context.length;
+        for (let i = 1; i < viewLen; i++) {
+            ret += `
+            <div class="carousel-item c-item">
+                <img src="${context[i].picture}" class="d-block w-100 c-img" alt="Slide ${i+1}">
+                <div class="banner">${context[i].title}</div>
+            </div>`;
+        }
+
+        return ret;
     }
 };

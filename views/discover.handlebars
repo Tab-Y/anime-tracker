@@ -22,16 +22,8 @@
         </div>
     
         <div class="carousel-inner">
-            <div class="carousel-item active c-item">
-                <img src="https://via.placeholder.com/1920x1080" class="d-block w-100 c-img" alt="Slide 2">
-                <div class="banner"></div>
-            </div>
-            {{#each anime}}
-            <div class="carousel-item c-item">
-                <img src="{{picture}}" class="d-block w-100 c-img" alt="Slide {{@index}}">
-                <div class="banner">{{title}}</div>
-            </div>
-            {{/each}}
+            {{#jumboImages anime}}
+            {{/jumboImages}}
         </div>
     </div>
 </section>
