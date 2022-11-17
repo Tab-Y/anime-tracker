@@ -1,7 +1,3 @@
-const insideEl = document.querySelectorAll('.custom1');
-console.log(insideEl);
-let active = "";
-let storeHTML = [];
 let storeInner = [];
 let storePos = [];
 
@@ -32,6 +28,7 @@ do {
 window.onload = function() {
     const insideEl = document.querySelector('.custom1');
 
+    let active = "";
     for (let i = 0; i < storePos.length; i++) {
         if (i == 0) {
             active = "active";
