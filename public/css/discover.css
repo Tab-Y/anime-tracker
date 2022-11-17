@@ -249,6 +249,7 @@ input, input.form-control {
 
 .custom1 {
     transform: scale(0.9);
+    height: auto !important;
 }
 
 [class*="fa-angle-"] {
