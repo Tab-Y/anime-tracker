@@ -68,7 +68,7 @@ try {
   };
 
   const special = seasonalCarousel.map((data) => data.get({ plain: true }));
-  console.log('hello')
+
   console.log(special)
 
   res.render('discover', {

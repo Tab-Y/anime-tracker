@@ -1,3 +1,4 @@
+{{> nav}}
 {{!-- Profile Username welcome page --}}
 <div>
     <h2 class="profileWelcome">Welcome, {{username}}!</h2>
@@ -7,6 +8,7 @@
 <div class="profileRow">
     <div class="col-lg profileColumn">
         <h3 class="profileHeaders">Watchlist</h3>
+        {{#each status}}
         <!-- <ul class="profileUl">
                 <li class="updatesLi">Test</li>
                 <li class="updatesLi">Test</li>
