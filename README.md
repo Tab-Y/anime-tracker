@@ -26,28 +26,34 @@ Setup .env variables
 Create your database
 
 seed your database
+
     ```
     npm run seed
     ```
 
+
 Start server
+
     ```
     npm start
     ```
 
+
 View locally
+
     ```
     localhost:3001
     ```
+
 
 Or visit the deployed application 
 
 ## Usage 
 
 Vist the deployed application at this link!
-<!-- link goes here -->
+https://anime-tracker-11-2022.herokuapp.com/
 
-![Descriptive text](assets/images/screenshot.png) 
+![homepage screen shot](./assets/images/anime-tracker-splash.png) 
 
 ## Credits 
 
