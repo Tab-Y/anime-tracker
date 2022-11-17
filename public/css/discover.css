@@ -264,3 +264,27 @@ input, input.form-control {
     text-decoration: none;
     margin: -5%;
 }
+
+.col-md-3 {
+    position: relative;
+}
+
+.cover {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-bg-67);
+    overflow: hidden;
+}
+
+.cover p {
+    font-size: 1vw;
+}
+
+.col-md-3:hover .cover {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}

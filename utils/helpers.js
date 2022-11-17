@@ -1,4 +1,3 @@
-let storeInner = [];
 let storePos = [];
 const viewLen = 4;
 
@@ -9,16 +8,6 @@ function mod6(input, base) {
 function preSetup(arrLength) {
     const itemLen = arrLength; // context.length
     let longShift = true;
-
-    for (let i = 1; i <= itemLen; i++) {
-        let innerChunk = `
-                        <div class="col-md-3">
-                            <img src="https://via.placeholder.com/225x316?text=${i}" class="img-fluid">
-                        </div>
-        `;
-
-        storeInner.push(innerChunk);
-    }
 
     let cnt = 1;
     do {
