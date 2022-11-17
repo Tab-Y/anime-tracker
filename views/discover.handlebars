@@ -24,30 +24,19 @@
     <!-- spy x family season 2 visual imagesize:1920x1080 -->
     <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" aria-label="Slide 1"
-                class="active" aria-current="true"></button>
-            {{#each anime}}
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="{{@index}}"
-                aria-label="Slide {{@index}}"></button>
-            {{/each}}
+
+            {{#jumboButtons anime}}
+            {{/jumboButtons}}
+
         </div>
 
         <div class="carousel-inner">
-            <div class="carousel-item active c-item">
-                <img src="https://via.placeholder.com/1920x1080" class="d-block w-100 c-img" alt="Slide 2">
-                <div class="banner"></div>
-            </div>
-            {{#each anime}}
-            <div class="carousel-item c-item">
-                <img src="{{picture}}" class="d-block w-100 c-img" alt="Slide {{@index}}">
-                <div class="banner">{{title}}</div>
-            </div>
-            {{/each}}
+            {{#jumboImages anime}}
+            {{/jumboImages}}
         </div>
     </div>
 </section>
 {{!-- tabs to each discovery --}}
-
 {{/if}}
 {{!-- {{#each group}}
 <section class="column-carousels">
@@ -90,5 +79,3 @@
 </section>
 {{/each}} --}}
 <!-- spy x family season 2 visual imagesize:1920x1080 -->
-<!-- JS Scripts -->
-<script src="/js/createHTML.js"></script>
