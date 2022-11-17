@@ -59,17 +59,22 @@ router.get('/', async (req, res) => {
 router.get('/seasonal', async (req, res) => {
 try {
   const animeData = await Main.findAll({});   
+  const carouselSize = 16;
+  let curr = 0;
 
   const seasonalCarousel = [];                      // array of 8 id's where current season is listed
-  for (i=0;i<animeData.length;i++){
-    if(animeData[i].season === "WINTER"){
+  for (let i = 0; i < animeData.length; i++){
+    if (curr >= carouselSize) {
+      break;
+    } else if (animeData[i].season === "FALL" && animeData[i].year === 2022){
       seasonalCarousel.push(animeData[i])           // loops through list and pulls entry by the id
+      curr++;
+      console.log(curr);
     }
   };
 
   const special = seasonalCarousel.map((data) => data.get({ plain: true }));
 
-  console.log(special)
 
   res.render('discover', {
     special,
