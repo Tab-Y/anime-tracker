@@ -9,8 +9,8 @@
     <div class="col-lg profileColumn">
         <h3 class="profileHeaders">Watchlist</h3>
         <ul class="profileUl">
-            {{#each status}}
-            {{#if planned}}
+            {{#each thisUsersFavs.status}}
+            {{#if thisUsersFavs.planned}}
             <li class="updatesLi">Test</li>
             {{/if}}
             {{/each}}
@@ -18,8 +18,8 @@
     <div class="col-lg profileColumn">
         <h3 class="profileHeading profileHeaders">Currently Watching</h3>
         <ul class="profileUl">
-            {{#each status}}
-            {{#if watching}}
+            {{#each thisUsersFavs.status}}
+            {{#if thisUsersFavs.watching}}
             <li class="updatesLi">Test</li>
             {{/if}}
             {{/each}}
@@ -27,8 +27,8 @@
     <div class="col-lg profileColumn">
         <h3 class="profileHeaders">Completed</h3>
         <ul class="profileUl">
-            {{#each status}}
-            {{#if completed}}
+            {{#each thisUsersFavs.status}}
+            {{#if thisUsersFavs.completed}}
             <li class="updatesLi">Test</li>
             {{/if}}
             {{/each}}
@@ -36,8 +36,8 @@
     <div class="col-lg profileColumn">
         <h3 class="profileHeaders">Dropped</h3>
         <ul class="profileUl">
-            {{#each status}}
-            {{#if dropped}}
+            {{#each thisUsersFavs.status}}
+            {{#if thisUsersFavs.dropped}}
             <li class="updatesLi">Test</li>
             {{/if}}
             {{/each}}
