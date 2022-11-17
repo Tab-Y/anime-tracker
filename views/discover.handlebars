@@ -17,10 +17,8 @@
     <!-- spy x family season 2 visual imagesize:1920x1080 -->
     <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
-            {{#each anime}}
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="{{@index}}" aria-label="Slide {{@index}}"></button>
-            {{/each}}
+            {{#jumboButtons anime}}
+            {{/jumboButtons}}
         </div>
     
         <div class="carousel-inner">
@@ -38,7 +36,6 @@
     </div>
 </section>
 {{!-- tabs to each discovery --}}
-
 {{/if}}
 {{!-- {{#each group}}
 <section class="column-carousels">

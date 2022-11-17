@@ -41,5 +41,15 @@ module.exports = {
         }
       
         return ret;
+    },
+    jumboButtons: (context) => {
+        var ret = `<button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>`;
+        var viewLen = context.length;
+
+        for (let i = 1; i < viewLen; i++) {
+            ret += `<button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="${i}" aria-label="Slide ${i+1}"></button>`;
+        }
+
+        return ret;
     }
 };
