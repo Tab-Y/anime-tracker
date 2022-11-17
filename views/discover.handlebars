@@ -1,3 +1,4 @@
+{{> nav}}
 <section class="search-bar">
     <div class="shape1">
         <div class="input-group">
@@ -8,6 +9,12 @@
         </div>
     </div>
 </section>
+<div class="d-grid gap-2 d-md-flex justify-content-md-center m-5">
+    <button class="btn btn-primary me-md-2" type="button" id="con-btn"><a id="discover" href="/api/discover/">Discover</a></button>
+    <button class="btn btn-primary" type="button" id="not-btn"><a id="seasonal" href="/api/discover/seasonal">Seasonal</a></button>
+    <button class="btn btn-primary" type="button" id="con-btn"><a id="popular" href="/api/discover/popular">Popular</a></button>
+    <button class="btn btn-primary" type="button" id="not-btn"><a id="recommended" href="/api/discover/recommended">Recommended</a></button>
+</div>
 
 {{#if group}}
 {{> discovergroups}}
@@ -17,12 +24,14 @@
     <!-- spy x family season 2 visual imagesize:1920x1080 -->
     <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" aria-label="Slide 1"
+                class="active" aria-current="true"></button>
             {{#each anime}}
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="{{@index}}" aria-label="Slide {{@index}}"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="{{@index}}"
+                aria-label="Slide {{@index}}"></button>
             {{/each}}
         </div>
-    
+
         <div class="carousel-inner">
             <div class="carousel-item active c-item">
                 <img src="https://via.placeholder.com/1920x1080" class="d-block w-100 c-img" alt="Slide 2">
@@ -44,11 +53,11 @@
 <section class="column-carousels">
     <h1 class="header-font down-shift">{{group.group}}</h1>
     <div class="shape1">
-        <div class="container text-center my-3"> 
+        <div class="container text-center my-3">
             <div class="row mx-auto my-auto justify-content-center">
                 <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="custom1 carousel-inner" role="listbox">
-                        
+
                         <div class="custom2 carousel-item active">
                             <div class="col-md-3">
                                 <img src="https://via.placeholder.com/225x316?text=1" class="img-fluid">
@@ -64,16 +73,18 @@
                                 <img src="https://via.placeholder.com/225x316?text=3" class="img-fluid">
                             </div>
                         </div>
-    
-                    </div> 
-                    <a class="carousel-control-prev bg-transparent w-auto"     href="#recipeCarousel"role="button" data-bs-slide="prev"> 
-                        <span class="fa fa-angle-left" aria-hidden="true"></span> 
-                    </a> 
-                    <a class="carousel-control-next bg-transparent w-auto"     href="#recipeCarousel"role="button" data-bs-slide="next"> 
-                        <span class="fa fa-angle-right" aria-hidden="true"></span> 
-                    </a> 
-                </div> 
-            </div> 
+
+                    </div>
+                    <a class="carousel-control-prev bg-transparent w-auto" href="#recipeCarousel" role="button"
+                        data-bs-slide="prev">
+                        <span class="fa fa-angle-left" aria-hidden="true"></span>
+                    </a>
+                    <a class="carousel-control-next bg-transparent w-auto" href="#recipeCarousel" role="button"
+                        data-bs-slide="next">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

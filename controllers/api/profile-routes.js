@@ -55,17 +55,22 @@ router.get('/favorites/:id', withAuth, async (req, res) => {
   }
 });
 
+
 router.post('/favorites', withAuth, async (req, res) => {
+  console.log(req.body)
   try {
     const createNewFav = await UserFavorite.create(req.body, {
       userId: req.session.user_id,
-      ...req.body,
+      favoriteTitleId: req.body.favoriteTitleId,
+      status: req.body.status
+
     });
     res.status(200).json(createNewFav)
   } catch (err) {
     res.status(400).json(err);
   }
 })
+
 
 router.delete('/favorites/:id', withAuth, async (req, res) => {      // deletes favs by id (and userId)
   try {
