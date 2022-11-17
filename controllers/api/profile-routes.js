@@ -12,9 +12,19 @@ router.get('/', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
+    const thisFavs = await UserFavorite.findAll({
+      where: {
+        userId: user.id
+      }
+    });
 
+    const thisUsersFavs = thisFavs.map((data) => data.get({ plain: true }));
+    console.log(thisFavs)
+
+    console.log(user.id)
     res.render('profile', {
       ...user,
+      ...thisUsersFavs,
       logged_in: true
     });
   } catch (err) {
