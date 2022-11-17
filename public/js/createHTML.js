@@ -25,6 +25,7 @@ do {
     storePos.push(base);
 } while (mod6(viewLen*(cnt++)) != 0);
 
+/*
 const insideEl = document.querySelector('.custom1');
 let active = "";
 for (let i = 0; i < storePos.length; i++) {
@@ -37,10 +38,34 @@ for (let i = 0; i < storePos.length; i++) {
     for (let j = 0; j < viewLen; j++) {
         guts += storeInner[mod6(storePos[i] + j)]
     }
+
     insideEl.innerHTML += `
                 <div class="custom2 carousel-item ${active}">
                     ${guts} 
                 </div>
     `;
+    console.log(insideEl.innerHTML);
 }
+*/
+
+hbs.registerHelper("custom", function(context, options) {
+    var ret = "";
+    let active = "";
+
+    for (let i = 0; i < storePos.length; i++) {
+        if (i == 0) {
+            active = "active";
+        } else {
+            active = "";
+        }
+
+        ret += `<div class="custom2 carousel-item ${active}">`;
+        for (let j = 0; j < viewLen; j++) {
+            ret += options.fn(context[mod6(storePos[i] + j)]);
+        }
+        ret += "</div>";
+    }
+  
+    return ret;
+});
 // Learned from https://bbbootstrap.com/snippets/bootstrap-5-bootstrap-5-carousel-vanilla-multiple-items-80120567#
