@@ -37,72 +37,48 @@ router.get('/', async (req, res) => {
     const anime = formattedData.map((data) => data.get({ plain: true }));
     const aniLen = aniList.length;
 
+    // Seasonal
+    console.log(1);
+    const seasonalData = await Main.findAll({});   
+    const carouselSize = 16;
+    let seasonalCurr = 0;
 
-    res.render('discover', {
-      anime,              // initial
-      aniLen,
-      css: [
-        "shape",
-        "discover",
-        "colCarousel"
-      ],
-
-
-
-    });
-   
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get('/seasonal', async (req, res) => {
-try {
-  const animeData = await Main.findAll({});   
-  const carouselSize = 16;
-  let curr = 0;
-
-  const seasonalCarousel = [];                      // array of 8 id's where current season is listed
-  for (let i = 0; i < animeData.length; i++){
-    if (curr >= carouselSize) {
-      break;
-    } else if (animeData[i].season === "FALL" && animeData[i].year === 2022){
-      seasonalCarousel.push(animeData[i])           // loops through list and pulls entry by the id
-      curr++;
-      console.log(curr);
-    }
-  };
-
-  const special = seasonalCarousel.map((data) => data.get({ plain: true }));
-
-
-  res.render('discover', {
-    special,
-    css: [
-      "shape",
-      "discover",
-      "colCarousel"
-    ],
-    group: "Seasonal",
-  });
-} catch (err) {
-  res.status(500).json(err);
-}
-});
-
-router.get('/popular', async (req, res) => {
-  try {
-    const userFav = await UserFavorite.findAll({})
-    const popularCarousel = [];                       // array for where most favorited titles are
-    for (i=0;i<8;i++) {
-      const popArr = [];
-      for(x=0;x<userFav.length;x++){
-          popArr.push(userFav[x].favoriteTitleId)    // pulls id number from favs list
+    console.log(2);
+    const seasonalCarousel = [];
+    for (let i = 0; i < seasonalData.length; i++){
+      console.log(3.1);
+      if (seasonalCurr >= carouselSize) {
+        console.log(4.1);
+        break;
+      } else if (seasonalData[i].season === "FALL" && seasonalData[i].year === 2022){
+        console.log(4.2);
+        seasonalCarousel.push(seasonalData[i]);
+        seasonalCurr++;
+        console.log(seasonalCurr);
       }
-      popularCarousel.push(popArr[Math.floor(Math.random()*popArr.length)])
+      console.log(3.2);
+    };
+    console.log(5);
+
+    const seasonalSpecial = seasonalCarousel.map((data) => data.get({ plain: true }));
+    console.log(6);
+
+    // Popular
+    const userFav = await UserFavorite.findAll({})
+    const popularCarousel = [];
+
+    // DANGER DANGER
+    const popArr = [];
+    for(let x = 0; x < userFav.length; x++){
+        popArr.push(userFav[x].favoriteTitleId);
+    }
+    // MAY BREAK, REFER TO LATER ^^^
+    
+    for (let i = 0; i < 8; i++) {
+      popularCarousel.push(popArr[Math.floor(Math.random()*popArr.length)]);
     };
 
-    const formattedData = [];
+    const formattedData1 = [];
     
     for (let i = 0; i < popularCarousel.length; i++) {
       const obj = popularCarousel[i]
@@ -113,73 +89,57 @@ router.get('/popular', async (req, res) => {
         }
       });
       console.log(newData)
-        formattedData.push(newData);
+        formattedData1.push(newData);
       
     }
-    const special = formattedData.map((data) => data.get({ plain: true }));
+    const popularSpecial = formattedData1.map((data) => data.get({ plain: true }));
 
+    // Recommended
+    const genreId = 81;
+    const recData = await TagId.findAll({
+      where: {
+        tag_id: genreId
+      },    
+    });
+    const recomendedCarousel = [];
+    for(let j = 0; j < 8; j++){
+      recomendedCarousel.push(recData[Math.floor(Math.random()*recData.length)])
+    };
 
+    const formattedData2 = [];   
+    for (let i = 0; i < recomendedCarousel.length; i++) {
+      const obj = recomendedCarousel[i].title_id
+      // string formatting to make it work properly w/o bugs
+      console.log(obj)
+      const newData = await Main.findOne({
+        where: {
+          id: obj
+        }
+      });
+    
+      formattedData2.push(newData);
+    }   
+    const recommendedSpecial = formattedData2.map((data) => data.get({ plain: true }));
 
     res.render('discover', {
-      special,
+      anime,              // initial
+      mini: [
+        { data: seasonalSpecial, group: "Seasonal" },
+        { data: popularSpecial, group: "Popular" },
+        { data: recommendedSpecial, group: "Recommended" }
+      ],
+      aniLen,
       css: [
         "shape",
         "discover",
         "colCarousel"
       ],
-      group: "Popular",
+
     });
+   
   } catch (err) {
     res.status(500).json(err);
   }
-  });
-
-  router.get('/recommended', withAuth, async (req, res) => {
-    try {
-      
-      const genreId = 81;                               // future update to user input for their favorite genre/ keywords
-      const recData = await TagId.findAll({
-        where: {
-          tag_id: genreId
-        },
-
-      });
-      const recomendedCarousel = [];                   // array to match genre / keyword / tag
-      for(j=0;j<8;j++){
-        recomendedCarousel.push(recData[Math.floor(Math.random()*recData.length)])
-      };
-      
-      const formattedData = [];
-
-      for (let i = 0; i < recomendedCarousel.length; i++) {
-        const obj = recomendedCarousel[i].title_id
-        // string formatting to make it work properly w/o bugs
-          console.log(obj)
-        const newData = await Main.findOne({
-          where: {
-            id: obj
-          }
-        });
-  
-        formattedData.push(newData);
-      }
-
-      const special = formattedData.map((data) => data.get({ plain: true }));
-
-
-      res.render('discover', {
-        special,
-        css: [
-          "shape",
-          "discover",
-          "colCarousel"
-        ],
-        group: "Recommended",
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-    });
-
+});
 
 module.exports = router;
