@@ -24,6 +24,8 @@ module.exports = {
     custom: (context, options) => {
         var ret = "";
         let active = "";
+        console.log(context);
+        console.log(options);
         preSetup(context.length);
     
         for (let i = 0; i < storePos.length; i++) {

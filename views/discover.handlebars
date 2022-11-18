@@ -9,16 +9,7 @@
         </div>
     </div>
 </section>
-<div class="d-grid gap-2 d-md-flex justify-content-md-center m-5">
-    <button class="btn btn-primary me-md-2" type="button" id="con-btn"><a id="discover" href="/api/discover/">Discover</a></button>
-    <button class="btn btn-primary" type="button" id="not-btn"><a id="seasonal" href="/api/discover/seasonal">Seasonal</a></button>
-    <button class="btn btn-primary" type="button" id="con-btn"><a id="popular" href="/api/discover/popular">Popular</a></button>
-    <button class="btn btn-primary" type="button" id="not-btn"><a id="recommended" href="/api/discover/recommended">Recommended</a></button>
-</div>
 
-{{#if group}}
-{{> discovergroups}}
-{{else}}
 <section class="trending-zone">
     <h1 class="header-font down-shift">Trending</h1>
     <!-- spy x family season 2 visual imagesize:1920x1080 -->
@@ -36,8 +27,10 @@
         </div>
     </div>
 </section>
+{{#each mini}}
+{{> discovergroups}}
+{{/each}}
 {{!-- tabs to each discovery --}}
-{{/if}}
 {{!-- {{#each group}}
 <section class="column-carousels">
     <h1 class="header-font down-shift">{{group.group}}</h1>
